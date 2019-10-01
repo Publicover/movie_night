@@ -1,0 +1,26 @@
+<h1>Movies#new</h1>
+<p>Find me in app/views/movies/new.html.erb</p>
+
+<%= form_for @movie do |f| %>
+  <% if @movie.errors.any? %>
+  <div id="error_explanation">
+    <p>
+      <%= pluralize(@movie.errors.count, "error") %> prohibited
+      this article from being saved:
+    </p>
+    <% @movie.errors.full_messages.each do |msg| %>
+      <li><center><%= msg %></li>
+    <% end %>
+  </div>
+  <% end %>
+
+    <% f.hidden_field :user_id, value: current_user.id %>
+
+  <div>
+    <%= f.label 'Name' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>

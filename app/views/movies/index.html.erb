@@ -1,0 +1,26 @@
+<h1>Movies#index</h1>
+<p>Find me in app/views/movies/index.html.erb</p>
+<center>
+  <h1>MOVIES</h1>
+
+  <table class="table table-hover">
+    <thead>
+      Name
+    </thead>
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+          <td>
+            <center>
+              <%= movie.name %>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Show', movie_path(id: movie.id) %>
+            </center>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <p><%= params.inspect %></p>
+
+  <h4><%= link_to 'New movie', new_movie_path %></h4>
+</center>
