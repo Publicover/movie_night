@@ -1,2 +1,23 @@
 <h1>Movies#show</h1>
 <p>Find me in app/views/movies/show.html.erb</p>
+
+<center>
+  <h3>Name: <%= @movie.name %></h3>
+  <p><%= image_tag "#{@movie.poster}" %></p>
+  <p><%= @movie.rated %></p>
+  <p><%= @movie.released %></p>
+  <p><%= @movie.runtime %></p>
+  <p><%= @movie.genre %></p>
+  <p><%= @movie.director %></p>
+  <p><%= @movie.writer %></p>
+  <p><%= @movie.actors %></p>
+  <p><%= @movie.plot %></p>
+  <p><%= @movie.country %></p>
+  <p><%= @movie.awards %></p>
+  <p>IMDB: <%= @movie.imdb %></p>
+  <p>Rotten Tomatoes: <%= @movie.rotten_tomatoes %></p>
+  <p>Metacritic: <%= @movie.metacritic %></p>
+  <!-- <p><%= na?(@movie.website) %></p> -->
+  <!-- <p><%= link_to "See the website", "#{@movie.website}" %></p> -->
+  <p><%= link_to 'Back to movies', movies_path %></p>
+</center>

@@ -12,7 +12,9 @@
         <tr>
           <td>
             <center>
-              <%= movie.name %>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Show', movie_path(id: movie.id) %>
+              <%= movie.name %>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <%= link_to 'Show', movie_path(id: movie.id) %>&nbsp;&nbsp;|&nbsp;&nbsp;
+              <%= link_to 'Delete', movie_path(id: movie.id), method: :delete %>
             </center>
           </td>
         </tr>
